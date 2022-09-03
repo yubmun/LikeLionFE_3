@@ -54,6 +54,20 @@ Click [here](https://google.com)
 ```js
 console.log('hi');
 ```
-:ear:귀
-:tongue:혀
-:basketball:농구공
+:ear:귀  
+:tongue:혀  
+:basketball:농구공  
+## 글자 강조
+**굵은글씨**  
+*이탈릭*  
+_이탤릭_  
+~~취소선~~  
+<u>밑줄</u>  
+
+`강조`  
+```js
+function sumAll(a,b,c){
+  total = a + b + c;
+}
+```
+### 아무래도 익숙해지긴 어려울 거 같다
