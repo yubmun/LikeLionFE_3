@@ -137,8 +137,7 @@ header button {
 
 /* section time */
 .time{
-  border: 1px solid #000;
-  margin-left: 250px;
+  margin-left: 230px;
   display: flex;
 }
 .time h2{
@@ -157,7 +156,7 @@ header button {
   overflow: hidden;
   position: relative;
 }
-.mula figcaption, .soulBear figcaption{
+.mula figcaption, .soulBear figcaption, .gary figcaption{
   margin-left: 20px;
   margin-top: 20px;
   position: absolute;
@@ -166,21 +165,25 @@ header button {
 .mula figcaption p{
   color: white;
 }
-.soulBear figcaption p{
+.soulBear figcaption p, .gary figcaption p{
   color: black;
 }
+
 .mula figcaption p:first-child,
-.soulBear figcaption p:first-child{
+.soulBear figcaption p:first-child,
+.gary figcaption p:first-child{
   text-decoration: underline;
   font-weight: bold;
 }
 .mula figcaption h3,
-.soulBear figcaption h3{
+.soulBear figcaption h3,
+.gary figcaption h3{
   color: white;
   font-size: 30px;
   margin: initial;
 }
-.soulBear figcaption h3{
+.soulBear figcaption h3,
+.gary figcaption h3{
   color: black;
 }
 .mula img {
@@ -197,7 +200,19 @@ header button {
 }
 .gary{
   width: 600px;
-  height: 600px;
-  border: 1px solid #000;
+  height: 593px;
+  background-color: #D2E579;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-left: -20px;
+}
+.gary img{
+  width: 461px;
+  height: 528px;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  
 }
 
