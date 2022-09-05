@@ -1,0 +1,203 @@
+ul, li{
+  list-style: none;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+body{
+  margin: 0;
+}
+
+/* Header */
+.headerWrap{
+  margin-left: 250px;
+  position: relative;
+  background-color: white;
+}
+header h1 {
+  display: inline-block;
+  padding: 15px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+header ul {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+}
+header ul li{
+  display: inline-block;
+  padding: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+}
+header ul li:hover{
+  border-bottom: 1px solid black;
+  transition: .2s;
+}
+header button {
+  margin-left: 200px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: none;
+}
+
+/* section mainLion */
+.mainLion{
+  background-color: #FFCF5C;
+  display: flex;
+}
+.mainLion .lion{
+  width: 400px;
+  height: 400px;
+  margin-left: 300px;
+}
+.mainLionDesc {
+  margin-top: 40px;
+}
+.mainLionDesc p {
+  width: 410px;
+}
+.mainLionDesc h2{
+  font-size: 62px;
+  margin: 0;
+}
+.mainLionDesc button{
+  border: none;
+  padding: 13px;
+  width: 150px;
+  background-color: #FFCF5C;
+  border: 1px solid rgb(144, 61, 2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.mainLionDesc button:hover{
+  background-color: rgb(114,61,2);
+  transition: .3s;
+  color: white;
+}
+.mainLion aside{
+  width: 160px;
+  height: 100%;
+  margin-top: 40px;
+  margin-left: 145px;
+}
+.mainLion aside img{
+  width: 120px;
+  height: 170px;
+  border-radius: 10px;
+  position: absolute;
+}
+.mainLion aside a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  background-color: #FAF1BE;
+  text-align: center;
+  width: 100px;
+  border-radius: 10px;
+  position: absolute;
+  top: 218px;
+  padding: 10px;
+  color: rgb(3, 151, 3);
+  font-weight: bold;
+}
+/* section techDesc */
+.techDesc{
+  width: 1150px;
+  margin-left: 250px;
+  margin-top: 60px;
+}
+.techDesc h2 {
+  display: none;
+}
+.techDescWrap{
+  display: flex;
+}
+.htmlDesc, .cssDesc, .javaScriptDesc{
+  width: 350px;
+}
+.techDesc h3{
+  margin: 0;
+  margin-bottom: 10px;
+}
+.techDescWrap li:first-of-type{
+  list-style: none;
+  color: black;
+}
+.techDescWrap li {
+  list-style: disc;
+  color: rgba(0, 0, 0, 0.323);
+}
+
+/* section time */
+.time{
+  border: 1px solid #000;
+  margin-left: 250px;
+  display: flex;
+}
+.time h2{
+  display: none;
+}
+.time .mula{
+  background-color: #E37066;
+}
+.time .soulBear{
+  background-color: #CBDFF7;
+}
+.time .mula, .time .soulBear{
+  width: 600px;
+  height: 288px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.mula figcaption, .soulBear figcaption{
+  margin-left: 20px;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.mula figcaption p{
+  color: white;
+}
+.soulBear figcaption p{
+  color: black;
+}
+.mula figcaption p:first-child,
+.soulBear figcaption p:first-child{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.mula figcaption h3,
+.soulBear figcaption h3{
+  color: white;
+  font-size: 30px;
+  margin: initial;
+}
+.soulBear figcaption h3{
+  color: black;
+}
+.mula img {
+  width: 472px;
+  height: 325px;
+  position: absolute;
+  left: 20%;
+}
+.soulBear img{
+  width: 368px;
+  height: 283px;
+  position: absolute;
+  left: 40%;
+}
+.gary{
+  width: 600px;
+  height: 600px;
+  border: 1px solid #000;
+}
+
