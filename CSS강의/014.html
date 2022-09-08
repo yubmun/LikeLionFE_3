@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+      /* 둘 다 important가 적용되어 있을 땐, 순서에 영향을 받는다. */
+      .one{
+        color: red !important;
+      }
+      .two{
+        color: blue !important;
+      }
+    </style>
+</head>
+<body>
+    <div class="one two">가나다라</div>
+    <div class="two one">마바사아</div>
+    <!-- 인라인에 important가 가장 쎄다.
+    단, css에만 important가 있다면, 인라인도 못막는다 -->
+    <div class="two" style="color: green !important;">자차카타</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+      #one{
+        color: red;
+      }
+    </style>
+</head>
+<body>
+  <!-- id는 해당 문서 내에서 유일해야 한다. 중복은 X -->
+  <h1 id="one">hello world</h1>
+  <h1>hello world</h1>
+  <!-- a태그 내의 href 속성에도 id 값을 부여할 수 있다. -->
+  <a href="#one"></a>
+</body>
+</html>
