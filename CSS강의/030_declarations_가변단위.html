@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        margin: 0;
+      }
+      .one{
+        width: 200px;
+      }
+      div{
+        background-color: red;
+        width: 50%;
+        /* 이 50%는 부모요소의 width 50%인데, 부모요소의 contents의 50% 이다. */
+        height: 200px;
+      }
+    </style>
+</head>
+<body>
+  <div class="one">
+    <div class="two">hello world</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* 마진 겹침 현상은, 일부로 의도한 css이다. 대부분의 경우 문제로 여기지 않고, 해결하지 않아도 되는 파트이다
+      형제간의 마진 겹침 현상 */
+      div:nth-child(1){
+        margin-bottom: 30px;
+        border: 1px solid #000;
+      }
+      div:nth-child(2){
+        margin-top: 60px;
+        border: 1px solid #000;
+      }
+    </style>
+</head>
+<body>
+    <div>hello</div>
+    <div>hello</div>
+</body>
+</html>
