@@ -1,0 +1,46 @@
+.modal{
+  width: 350px;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px 19px;
+  margin: 100px auto;
+}
+.modal p{
+  font-size: 12px;
+  font-weight: 400;
+}
+.modal button{
+  display: block;
+  background-color: #711BFF;
+  padding: 10px 101px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal button img{
+  vertical-align: bottom;
+}
+
+.modal a{
+  text-decoration: none;
+  color: #767676;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+.modal .search img{
+  vertical-align: bottom;
+}
+.modal .search{
+}
+.modal .new {
+  float: right;
+}
+.modal .new img{
+  vertical-align: bottom;
+}
+.modal a:hover{
+  text-decoration: underline;
+}
