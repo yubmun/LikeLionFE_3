@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      .foo{
+        background-color: blue;
+      }
+      .foo:first-child{
+        background-color: red;
+      }
+      .foo:last-child{
+        background-color: red;
+      }
+    </style>
+</head>
+<body>
+    <!--
+    가상클래스 선택자 : 클래스가 없는데 있는 것 처럼 처리
+    가상클래스 선택자는 콜론이 하나 :
+    가상 요소 선택자 : 요소가 없는데 있는 것 처럼 처리
+    가상요소선택자는 콜론이 2개 ::
+    -->
+    <ul>
+      <li class="foo">1</li>
+      <li class="foo">2</li>
+      <li class="foo">3</li>
+      <li class="foo">4</li>
+      <li class="foo">5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      /* flex-basis는 flex-item의 크기를 지정한다.
+      width 와 height과 다른 점은,? 
+      width와 height이 더 강제적인 느낌
+      flex-basis는 유연한 느낌
+      */
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-basis: 40px;
+      }
+      .box {
+        height: 40px;
+        border: 1px solid #000;
+        background-color: skyblue;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt quos, explicabo minima, quo asperiores esse ad in culpa quod ut maxime earum beatae libero molestias at eius suscipit repudiandae sint. res esse ad in culpa quod ut maxime earum beatae libero molestias at eius suscipit repudiandae sintres esse ad in culpa quod ut maxime earum beatae libero molestias at eius suscipit repudiandae sint</div>
+      <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+      <div class="box">Lorem ipsum, dolor sit amet consectetur</div>
+      <div class="box">lorem</div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+</body>
+</html>

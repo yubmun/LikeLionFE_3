@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      div[class~="weniv"]{
+        color: black;
+      }
+      div.weniv{
+        color: pink;
+      }
+      /* 두개의 차이점은 둘다 클래스를 겨냥하기에 cascading 순서에 따라 적용*/
+      /* 단 [] 선택자는, 클래스가 아닌 다른 속성으로도 접근할 수 있다는 점. */
+    </style>
+</head>
+<body>
+    <div class="weniv">hello world</div>
+    <div>hello world2</div>
+</body>
+</html>

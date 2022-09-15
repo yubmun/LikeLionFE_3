@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      /* href 속성에 weniv만 들어가면 된다. */
+      a[href*="weniv"]{
+        color: red;
+      }
+    </style>
+</head>
+<body>
+  <!-- #의 의미는 새로고침이 안되고, 맨 위로 올라감 -->
+    <a href="#">#의 의미</a>
+    <a href="weniv">눌러!</a>
+    <a href="wenivs">눌러!</a>
+    <a href="we weniv">눌러!</a>
+    <a href="we weniv we">눌러!</a>
+    <a href="weaefwefwegwenivawefwafawfewe">눌러!</a>
+</body>
+</html>

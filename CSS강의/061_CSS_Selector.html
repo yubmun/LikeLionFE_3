@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      /* nth-child 순서는 0부터 시작하지 않는다
+      ()파라미터에 n을 넣으면 모두 선택된다
+      근데 또 n 은 0부터 시작함 ..?*/
+      /* div:nth-child(n){
+        background-color: red;
+      } */
+      /* div:nth-child(2n){
+        background-color: red;
+      } */
+
+      /* nth-child(이 안에 키워드를 쓸 수 있다.)
+      odd는 홀수 even은 짝수 */
+      div:nth-child(odd){
+        background-color: red;
+      }
+      /* 이전에 방문했다면 스타일이 적용된다, 개인정보보호를 위해 매우 제한적임 */
+      a:visited{
+        color: red;
+      }
+      /* .one 클래스를 가지지 않은 녀석만 선택한다 */
+      li:not(.one){
+        color: red;
+      }
+    </style>
+</head>
+<body>
+    <a href="https://paullab.co.kr">파울랩</a>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li class="one">hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+</body>
+</html>

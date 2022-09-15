@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* div 중 class를 갖는 애를 선택 */
+      div[class]{
+        font-size: 10px;
+      }
+      /* a 중 href 속성을 갖는 애를 선택 */
+      a[href]{
+        font-size: 10px;
+      }
+      a[href="https://www.google.com"]{
+        font-size: 24px;
+      }
+      /* div 중 class에 weniv가 입력되어 있다면 적용 */
+      div[class~="weniv"]{
+        color: red;
+      }
+    </style>
+</head>
+<body>
+    <div>hello world</div>
+    <div class="one">hello world</div>
+    <div class="">속성값이 없어도 attribute만 있다면 가능</div>
+    <a href="https://www.google.com">google</a>
+    <a>google</a>
+    <div class="weniv">hello</div>
+    <div class="wenivs">hello</div>
+    <div class="weniv we">hello</div>
+    <div class="we weniv we">hello</div>
+</body>
+</html>
