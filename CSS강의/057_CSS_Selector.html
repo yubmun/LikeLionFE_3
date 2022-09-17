@@ -14,22 +14,22 @@
       /* href 속성중 https로 시작하는것만 선택 */
       /* a[href^="https"]{
         color: red;
-      }
-      a[href="https"]{
-        color: peru
       } */
+      a[href^="http"]{
+        color: peru
+      }
 
-      a[href$="kr"]{
+      /* a[href$="kr"]{
         color: green;
       }
       a[href$=".png"]{
-        color: blue;
-      }
+        color: red;
+      } */
     </style>
 </head>
 <body>
-    <!-- <a href="http://www.puallab.co.kr">위니브</a>
-    <a href="https://www.puallab.co.kr">유튜브</a> -->
+    <a href="http://www.puallab.co.kr">위니브</a>
+    <a href="http.puallab.co.kr">유튜브</a>
 
     <a href="https://www.paullab.co.kr/a.png">사진</a>
 </body>

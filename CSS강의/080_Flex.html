@@ -8,6 +8,7 @@
     <style>
       .container{
         display: flex;
+        border: 1px solid #000;
       }
       .item{
         width: 50px;
@@ -15,9 +16,9 @@
         background-color: aqua;
         border: 1px solid #000;
       }
-      .item:nth-child(1){
-        /* flex-grow 여백이 다 사라지면 같아진다
+      /* flex-grow 여백이 다 사라지면 같아진다
         넓이가 아니라 여백이 늘어나거나 줄어들 때 2배로 늘어나거나 줄어든다. */
+      .item:nth-child(1){
         flex-grow: 2;
       }
       .item:nth-child(2){
