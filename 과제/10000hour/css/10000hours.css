@@ -115,9 +115,11 @@ header h1 .clock{
 }
 .promise input{
     border-radius: 7px;
-    padding: 20px;
+    padding: 20px 0;
     border: none;
     margin: 0 15px;
+    text-align: center;
+    font-size: 24px;
 }
 .promise .pro p{
     font-size: 24px;
@@ -221,16 +223,16 @@ header h1 .clock{
 }
 
 /* footer */
-footer{
+.footer{
     margin-top: 150px;
     padding-bottom: 150px;
     text-align: center;
 
 }
-footer h2{
+.footer h2{
     margin-bottom: 20px;
 }
-footer p{
+.footer p{
     font-family: 'Noto Sans KR';
     font-size: 12px;
     line-height: 17.38px;
