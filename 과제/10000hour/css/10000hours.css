@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+body{
+    position: relative;
+}
+
+/* wrapper 설정 */
+.wrapper{
+    background-color: #693590;
+}
+
+/* header */
+header{
+    overflow: hidden;
+}
+header h1 {
+    position: relative;
+    height: 300px;
+    margin-top: 150px;
+}
+header h1 .main-txt{
+    width: 750px;
+    height: 130px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+}
+header h1 .clock{
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+}
+
+/* main */
+/* section wise */
+.wise{
+    height: 250px;
+    position: relative;
+    margin-top: 100px;
+}
+.wise h2{
+    font-family: 'OTEnjoystoriesBA';
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 40px;
+    text-align: center;
+    color: #F5DF4D;
+    margin-bottom: 100px;
+}
+.wise p{
+    font-family: 'GmarketSansMedium';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+.wise p strong{
+    font-family: 'GmarketSansBold';
+    font-size: 30px;
+}
+.wise img{
+    position: absolute;
+    width: 620px;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: rgba(252, 238, 33, 0.3);
+}
+
+/* section promise */
+.promise{
+    margin-top: 150px;
+    text-align: center;
+}
+.promise h2{
+    display: none;
+}
+.promise .pro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promise input{
+    border-radius: 7px;
+    padding: 20px;
+    border: none;
+    margin: 0 15px;
+}
+.promise .pro p{
+    font-size: 24px;
+    color: white;
+}
+.promise .pro input::placeholder,
+.promise .time input::placeholder{
+    text-align: center;
+    color: #BABCBE;
+    font-size: 24px;
+}
+.promise .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.promise .time p{
+    font-size: 24px;
+    color: white;
+}
+
+/* section how-long */
+.how-long{
+    text-align: center;
+    margin-top: 150px;
+    position: relative;
+}
+.how-long h2{
+    display: none;
+}
+.how-long button{
+    padding: 25px 60px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.how-long img{
+    position: absolute;
+    top: 30%;
+    left: 67%;
+}
+
+/* section result */
+.result{
+    margin-top: 150px;
+    text-align: center;
+}
+.result h2{
+    display: none;
+}
+.result p{
+    font-family: 'GmarketSansMedium';
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 90px;
+}
+.result strong{
+    font-size: 72px;
+    margin-left: 20px;
+    margin-right: 20px;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+/* section share */
+.share{
+    text-align: center;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px
+}
+.share h2{
+    display: none;
+}
+.share button {
+    padding: 25px 80px;
+    border-radius: 56px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.share button:first-of-type{
+    background-color: #FCEE21;
+    color: #5B2386;
+}
+.share button:last-of-type{
+    color: #5B2386;
+    padding: 29px 80px;
+}
+
+/* footer */
+footer{
+    margin-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+
+}
+footer h2{
+    margin-bottom: 20px;
+}
+footer p{
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    line-height: 17.38px;
+    font-weight: 400;
+    color: white;
+    font-style: normal;
+}
+
+/* section modal */
+.modal{
+    position: absolute;
+    top:50%;
+    left :50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.modal-contents{
+    width: 850px;
+    height: 800px;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.101);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal h2{
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 96px;
+    color: #5B2386;
+    
+}
+.modal p{
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #5B2386;
+    margin-top: 30px;
+}
+.modal img{
+    margin-top: 30px;
+    width: 341px;
+    height: 290px;
+    
+}
+.modal a {
+    display: block;
+    width: 508px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    line-height: 70px;
+    text-decoration: none;
+    color: #5B2386;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
