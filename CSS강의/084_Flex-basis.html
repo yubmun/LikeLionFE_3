@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container{
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .item{
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .item:nth-child(2){
+            /* 주 축에 따라 basis가 넓이가 되기도 하고 높이가 되기도 한다.
+            flex-direction이 row 면 width와 같이
+            flex-direction이 column이면 height과 같이된다. */
+            /* flex-basis: 150px; */
+
+            /* 2개의 값이 있었을 때, flex-basis의 값을 우선한다. */
+            /* flex-basis: 100px;
+            width: 150px; */
+
+            /* width의 값은 넓이를 강제한다. */
+            /* width: 100px; */
+            flex-basis: 100px;
+            /* flex-basis는 contents의 크기만큼 늘어나게 된다. width와 flex-basis의 차이점 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2222222222222222222222</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

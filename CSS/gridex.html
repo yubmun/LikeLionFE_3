@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridex</title>
+    <style>
+      .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 4fr 9fr 2fr;
+        grid-template-areas:
+        "header header header"
+        "aside-left main aside-right"
+        "footer footer footer";
+      }
+      header{
+        grid-area: header;
+        background-color: aqua;
+        z-index: 1;
+      }
+      .left{
+        grid-area: aside-left;
+        background-color: red;
+        transition: 2s;
+      }
+      .left:hover{
+        transform: scale(2);
+      }
+      .right{
+        grid-area: aside-right;
+        background-color: pink;
+      }
+      main{
+        grid-area: main;
+        background-color: black;
+        color: white;
+        z-index: 1;
+      }
+      footer{
+        grid-area: footer;
+        background-color: blue;
+        color: white;
+        z-index: 1;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <header>header</header>
+      <aside class="left">aside-left</aside>
+      <main>main</main>
+      <aside class="right">aside-right</aside>
+      <footer>footer</footer>
+    </div>
+</body>
+</html>
