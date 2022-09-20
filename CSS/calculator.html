@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 300px;
+        height: 500px;
+      }
+      .wrapper div{
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 80px;
+      }
+      .header{
+        grid-area: 1/1/1/5;
+      }
+      .gray{
+        background-color: lightgray;
+        color: white;
+      }
+      .orange{
+        background-color: orange;
+        color: white;
+      }
+      .zero{
+        grid-area: 6/1/6/3;
+      }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="header">456</div>
+      <div class="gray">AC</div>
+      <div class="gray">+/-</div>
+      <div class="gray">%</div>
+      <div class="orange">/</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div class="orange">*</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div class="orange">-</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div class="orange">+</div>
+      <div class="zero">0</div>
+      <div>.</div>
+      <div class="orange">=</div>
+    </div>
+</body>
+</html>

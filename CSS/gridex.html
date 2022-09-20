@@ -14,19 +14,34 @@
         "header header header"
         "aside-left main aside-right"
         "footer footer footer";
+        background-color: purple;
+        z-index: 1;
       }
       header{
         grid-area: header;
         background-color: aqua;
-        z-index: 1;
       }
       .left{
         grid-area: aside-left;
         background-color: red;
-        transition: 2s;
+        animation: big 2s;
+        animation-iteration-count: infinite;
+        z-index: -1;
+        transition: .2s;
       }
       .left:hover{
         transform: scale(2);
+      }
+      @keyframes big{
+        0%{
+          transform: scale(1);
+        }
+        50%{
+          transform: scale(2);
+        }
+        100%{
+          transform: scale(1);
+        }
       }
       .right{
         grid-area: aside-right;
@@ -36,13 +51,11 @@
         grid-area: main;
         background-color: black;
         color: white;
-        z-index: 1;
       }
       footer{
         grid-area: footer;
         background-color: blue;
         color: white;
-        z-index: 1;
       }
     </style>
 </head>

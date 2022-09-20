@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator2</title>
+    <style>
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .wrapper h1{
+        text-align: right;
+        width: 357px;
+        border: 1px solid #000;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+        background-color: black;
+        border-radius: 10px 10px 0 0;
+      }
+      .wrapper .calcu{
+        width: 335px;
+        border: 1px solid #000;
+        display: grid;
+        height: 470px;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: black;
+        gap: 10px;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+      }
+      .calcu div{
+        line-height: 85px;
+        text-align: center;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+      }
+      .gray{
+        background-color: lightgray;
+        transition: .2s;
+      }
+      .gray:hover{
+        background-color: rgb(169, 169, 169);
+      }
+      .orange{
+        background-color: orange;
+        transition: .2s;
+      }
+      .orange:hover{
+        background-color: rgb(218, 142, 1);
+      }
+      .dark{
+        background-color: rgb(118, 117, 117);
+        transition: .2s;
+      }
+      .dark:hover{
+        background-color: rgb(181, 180, 180);
+      }
+      .zero{
+        grid-area: 5/1/5/3;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <h1>456</h1>
+      <div class="calcu">
+        <div class="gray">AC</div>
+        <div class="gray">+/-</div>
+        <div class="gray">%</div>
+        <div class="orange">/</div>
+        <div class="dark">7</div>
+        <div class="dark">8</div>
+        <div class="dark">9</div>
+        <div class="orange">*</div>
+        <div class="dark">4</div>
+        <div class="dark">5</div>
+        <div class="dark">6</div>
+        <div class="orange">-</div>
+        <div class="dark">1</div>
+        <div class="dark">2</div>
+        <div class="dark">3</div>
+        <div class="orange">+</div>
+        <div class="dark zero">0</div>
+        <div class="dark">.</div>
+        <div class="orange">=</div>
+      </div>
+    </div>
+</body>
+</html>

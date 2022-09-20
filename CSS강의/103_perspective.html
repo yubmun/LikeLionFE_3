@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+      @charset 'utf-8';
+
+      #app {
+        width: 100vw;
+        height: 100vh;
+        perspective: 1600px;
+      }
+      .list-item{
+        position: fixed;
+        width: 340px;
+        height: 400px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%) rotateY(100deg);
+        /* 3d 효과를 preserve한다. */
+        transform-style: preserve-3d;
+        transition: .5s;
+
+      }
+      .list-item li{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        /* 뒤에 있는 이미지를 숨김 */
+        backface-visibility: hidden;
+      }
+      .list-item li img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .list-item li:nth-child(1){
+        transform: rotateY(0) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(2){
+        transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(3){
+        transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(4){
+        transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(5){
+        transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(6){
+        transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/3.14/2))
+      }
+      .list-item li:nth-child(7){
+        transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/3.14/2))
+      }
+    </style>
+</head>
+<body>
+    <article id="app">
+      <h2>포켓몬 회전목마</h2>
+      <ul class="list-item">
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
+        <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li>
+      </ul>
+    </article>
+
+    <script>
+        const center = document.querySelector('.list-item');
+        const items = document.querySelectorAll('.list-item li');
+        const angle = 360 / items.length;
+        let currAngle = 0;
+
+        document.addEventListener('click', function (event) {
+            if (window.innerWidth / 2 < event.clientX) {
+                currAngle -= angle;
+            } else {
+                currAngle += angle;
+            }
+
+            center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+        })
+    </script>
+</body>
+</html>

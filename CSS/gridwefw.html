@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 z-index</title>
+    <style>
+      .container{
+        width: 400px;
+        z-index: 1;
+      }
+      .item{
+        background-color: red;
+        border: 1px solid #000;
+        z-index: 1;
+        height: 400px;
+      }
+      .one{
+        background-color: aqua;
+        z-index: 1;
+      }
+      .two{
+        background-color: pink;
+        z-index: -1;
+        transition: .2s;
+      }
+      .two:hover{
+        transform: scale(2);
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item one">1</div>
+      <div class="item two">2</div>
+      <div class="item three">3</div>
+    </div>
+</body>
+</html>
