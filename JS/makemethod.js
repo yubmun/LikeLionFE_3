@@ -26,7 +26,24 @@ function mkInclude(targetString, searchString, startIndex){
   }
 
 }
-// console.log(mkInclude('apple','p'));
+console.log(mkInclude('apple','p'));
+// 개선 코드 보고 리뷰 리뷰
+function mkInclude2(targetString, searchString, startIndex){
+
+  let num = 0;
+  if(startIndex !== undefined && isNaN(startIndex) !== false)
+  {
+      num = startIndex;
+  }
+
+  for(let i = num; i < targetString.length; i++){
+    if(targetString[i] === searchString){
+      return true;
+    }
+  }
+
+  return false;
+}
 
 // 질문 : stratIndex의 조건을 null로 하면 작동이 되질 않지만, undefined로 하면 작동이 된다. 그 이유는 무엇인지 정확하게는 모르겠다. null 이 object여서,,?
 
@@ -67,22 +84,22 @@ function mkIndexOf(targetString, searchString, startIndex){
  * 기능 : 정수값을 받아, 배열에서 해당 값에 해당하는 인덱스의 요소를 반환. 양수와 음수 모두 지정할 수 있으며, 음수 값의 경우 배열의 뒤에서부터 인덱스를 센다. 있는경우 해당 인덱스 요소를 반환하고 없다면 undefined를 반환한다.
  */
 
-function mkAt(targetArray, index){
+// function mkAt(targetArray, index){
 
-  let result = 0;
+//   let result = 0;
 
-  if(index > 0){
-    if(index > targetArray.length){
-      return undefined;
-    } else{
-      result = targetArray[index];
-      return result;
-    }
-  } else {
+//   if(index > 0){
+//     if(index > targetArray.length){
+//       return undefined;
+//     } else{
+//       result = targetArray[index];
+//       return result;
+//     }
+//   } else {
     
-  }
+//   }
 
-}
+// }
 
-let fruit = 'apple';
-console.log(fruit[3]);
+// let fruit = 'apple';
+// console.log(fruit[3]);
