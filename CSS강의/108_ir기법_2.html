@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ir기법_2</title>
+    <style>
+      div{
+        position: relative;
+        width: 500px;
+
+      }
+      img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        clip: rect(0 0 0 0);
+        /* clip은 언제 사라질지 모르는 기능이기에 현재 잘 사용하지 않는다. 때문에 clip-path를 사용한다. 공간이 사라지지는 않으며, 렌더링할 때 잘라내서 보여주는 기능이다. */
+      }
+    </style>
+</head>
+<body>
+    <div>
+      <img src="./img/icon-user.png" alt="">
+    </div>
+</body>
+</html>
