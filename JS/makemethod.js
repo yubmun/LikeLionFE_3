@@ -73,7 +73,7 @@ function mkIndexOf(targetString, searchString, startIndex){
   }
 }
 // console.log(mkIndexOf('apple', 'c'));
-// 질문 : 중복되는 것이 나오게 되면, 먼저 찾은 index가 아닌 나중에 찾은 index의 값을 반환하게 되는데, 먼저 찾은 index가 나오게 하려면 어떻게 해야할지 모르겠다.
+// 질문 : 중복되는 것이 나오게 되면, 먼저 찾은 index가 아닌 나중에 찾은 index의 값을 반환하게 되는데, 먼저 찾은 index가 나오게 하려면 어떻게 해야할지 모르겠다 해결완료.
 
 
 /**
