@@ -45,7 +45,7 @@ figure, figcaption, button{
   display: flex;
   align-items: center;
   justify-content: center;
-
+  gap: 28px;
 }
 
 .order-cola-left{
@@ -60,7 +60,6 @@ figure, figcaption, button{
 .order-cola-right{
   display: flex;
   flex-direction: column;
-  background-color: blue;
   width: 360px;
   height: 545px;
 }
@@ -118,7 +117,7 @@ figure, figcaption, button{
 
 /* order-cola-money */
 
-.order-cola-money{
+.order-cola-left .order-cola-money{
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -126,7 +125,7 @@ figure, figcaption, button{
   gap: 12px;
 }
 
-.order-cola-money span.money{
+.order-cola-left .order-cola-money span.money{
   width: 200px;
   height: 32px;
   background-color: #EAE8FE;
@@ -134,8 +133,21 @@ figure, figcaption, button{
   font-size: 14px;
   box-sizing: border-box;
   text-align: right;
-  padding-right: 35px;
+  padding-right: 30px;
   border-radius: 5px;
+  position: relative;
+}
+
+.order-cola-left .order-cola-money span.money::before{
+  content:'잔액:';
+  position: absolute;
+  left: 10px;
+}
+
+.order-cola-left .order-cola-money span.money::after{
+  content:'원';
+  position: absolute;
+  right: 10px;
 }
 
 .order-cola-money button{
@@ -165,9 +177,8 @@ figure, figcaption, button{
 
 /* order-cola-cart */
 
-.order-cola-cart {
+.order-cola-left .order-cola-cart {
   margin-top: 12px;
-  background-color: #EAE8FE;
   box-sizing: border-box;
   display: flex;
   overflow: hidden;
@@ -176,10 +187,25 @@ figure, figcaption, button{
 .order-cola-cart .cart-list{
   width: 200px;
   height: 106px;
+  overflow-x: hidden;
   overflow-y: scroll;
   border: 1px solid #BDBDBD;
+  background-color: #EAE8FE;
   border-radius: 5px;
   padding: 12px 12px 12px 18px;
+  box-sizing: border-box;
+}
+.order-cola-cart .cart-list::-webkit-scrollbar{
+  width: 4px;
+}
+.order-cola-cart .cart-list::-webkit-scrollbar-thumb{
+  height: 79px;
+  background: white;
+  border-radius: 50px;
+}
+
+.order-cola-cart .cart-list::-webkit-scrollbar-track{
+  background: #EAE8FE;
 }
 
 .order-cola-cart button{
@@ -201,6 +227,7 @@ figure, figcaption, button{
   height: 46px;
   background-color: white;
   border-radius: 5px;
+  margin-bottom: 6px;
 }
 
 .order-cola-cart .item figure{
@@ -239,4 +266,44 @@ figure, figcaption, button{
   line-height: 30px;
   margin-left: auto;
   border-radius: 5px;
+}
+
+/* order-cola-right */
+
+.order-cola-right .order-cola-money{
+  background-color: #fff;
+  width: 360px;
+  height: 50px;
+  padding: 9px 27px;
+  box-sizing: border-box;
+}
+
+.order-cola-right .order-cola-money .money{
+  display: inline-block;
+  width: 306px;
+  height: 32px;
+  background: #EAE8FE;
+  line-height: 32px;
+  text-align: right;
+  padding-right: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.order-cola-right .order-cola-cart{
+  width: 360px;
+  height: 474px;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.order-cola-cart-list > p{
+  text-align: center;
+}
+
+.order-cola-cart-list{
+  width: 306px;
+  height: 364px;
+  box-sizing: border-box;
 }
