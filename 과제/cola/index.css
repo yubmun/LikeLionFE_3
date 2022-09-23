@@ -1,0 +1,242 @@
+
+/* 초기화 요소 */
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #EAE8FE;
+}
+
+h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+
+p, span{
+  padding: 0;
+  margin: 0;
+}
+
+ul, li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+figure, figcaption, button{
+  margin: 0;
+  padding: 0;
+}
+
+/* section order-cola */
+
+/* layout */
+.main-logo{
+  width: 436px;
+  height: 204px;
+  position: relative;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.order-cola{
+  margin: 46px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.order-cola-left{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 545px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 31px 28px 27px 27px;
+}
+.order-cola-right{
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  width: 360px;
+  height: 545px;
+}
+
+/* order-cola-menu */
+
+.order-cola-menu ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+
+}
+
+.order-cola-menu button{
+  width: 94px;
+  height: 130px;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.order-cola-menu button:hover{
+  outline: 3px solid #6327FE;
+}
+
+.order-cola-menu button figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.order-cola-menu figure img{
+  width: 36px;
+  height: 65px;
+  margin-bottom: 6px;
+}
+.order-cola-menu figure p{
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 13px;
+  margin-bottom: 7px;
+}
+.order-cola-menu figure span.price{
+  padding: 5px 15px;
+  background-color: #6327FE;
+  border-radius: 50px;
+  color: white;
+  margin-bottom: 9px;
+}
+
+/* order-cola-money */
+
+.order-cola-money{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.order-cola-money span.money{
+  width: 200px;
+  height: 32px;
+  background-color: #EAE8FE;
+  line-height: 32px;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-align: right;
+  padding-right: 35px;
+  border-radius: 5px;
+}
+
+.order-cola-money button{
+  width: 94px;
+  height: 32px;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.order-cola-money input{
+  width: 200px;
+  height: 32px;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 7px;
+}
+
+.order-cola-money input::placeholder{
+  
+}
+
+/* order-cola-cart */
+
+.order-cola-cart {
+  margin-top: 12px;
+  background-color: #EAE8FE;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.order-cola-cart .cart-list{
+  width: 200px;
+  height: 106px;
+  overflow-y: scroll;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  padding: 12px 12px 12px 18px;
+}
+
+.order-cola-cart button{
+  width: 94px;
+  height: 106px;
+  background-color: #6327FE;
+  border: none;
+  margin-left: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  border-radius: 5px;
+
+}
+
+.order-cola-cart .item{
+  width: 170px;
+  height: 46px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.order-cola-cart .item figure{
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.order-cola-cart .item figure img{
+  width: 18px;
+  height: 33px;
+}
+.order-cola-cart .item figure figcaption{
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.order-cola-cart .item figure figcaption p{
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 4em;
+  display: block;
+  margin-left: 10px;
+}
+
+.order-cola-cart .item figure figcaption .count{
+  border: 1px solid #BDBDBD;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: auto;
+  border-radius: 5px;
+}
