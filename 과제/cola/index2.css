@@ -4,6 +4,7 @@
   background-color: #EAE8FE;
   width: 100%;
   height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .main-logo{
@@ -27,7 +28,7 @@
 .tabs .order-tab{
   width: 360px;
   height: 545px;
-  background-color:brown;
+  background-color:white;
   padding: 31px 28px 27px 27px;
   
 }
@@ -56,6 +57,48 @@
   width: 94px;
   height: 130px;
 }
+
+.cola-list-item{
+  width: 94px;
+  height: 130px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  border: none;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+}
+.cola-list-item img{
+  width: 36px;
+  height: 65px;
+  margin-top: 11px;
+}
+
+.cola-list-item figcaption{
+  padding: 0 13px;
+  box-sizing: border-box;
+}
+
+.cola-list-item figcaption > p{
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13px;
+  margin-top: 2px;
+  text-overflow: ellipsis;
+}
+.cola-list-item figcaption .price{
+  display: block;
+  width: 70px;
+  height: 22px;
+  background-color: #6327FE;
+  border-radius: 50px;
+  margin-top: 7px;
+  margin-bottom: 9px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: white;
+}
+
 
 .order-tab .calculator form{
   display: grid;
