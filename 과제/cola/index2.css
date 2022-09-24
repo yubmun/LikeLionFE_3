@@ -1,0 +1,147 @@
+/* 레이아웃 (+ 이미지 위치조정) */
+
+.wrapper{
+  background-color: #EAE8FE;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-logo{
+  display: block;
+  background-color: aqua;
+  margin: 0 auto;
+  width: 386px;
+  height: 180px;
+}
+
+.tabs{
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 67px;
+  width: inherit;
+  background-color:cornflowerblue;
+  
+}
+
+.tabs .order-tab{
+  width: 360px;
+  height: 545px;
+  background-color:brown;
+  padding: 31px 28px 27px 27px;
+  
+}
+
+.tabs .cart-tab{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 545px;
+  background-color:aquamarine;
+
+}
+
+/* order-tab */
+
+.order-tab .cola-list{
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.order-tab .cola-list button{
+  width: 94px;
+  height: 130px;
+}
+
+.order-tab .calculator form{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  width: 306px;
+  height: 77px;
+  row-gap: 11px;
+  column-gap: 12px;
+  background-color:coral;
+  margin-top: 20px;
+
+}
+
+.order-tab .calculator .balance{
+  background-color: #EAE8FE;
+}
+
+.order-tab .calculator button{
+  
+}
+
+.wrap-cola-order-list{
+  background-color:chartreuse;
+  margin-top: 11px;
+  display: flex;
+  gap: 12px;
+  height: 106px;
+}
+
+.cola-order-list{
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #EAE8FE;
+  padding: 12px 12px 12px 18px;
+}
+
+.cola-order-list li{
+  border: 1px solid #000;
+  height: 46px;
+  margin-bottom: 6px;
+}
+
+.wrap-cola-order-list button{
+  width: 145px;
+  height: 106px;
+}
+
+/* cart-tab */
+
+.cart-tab .wrap-money{
+  background-color: white;
+  height: 50px;
+  padding: 9px 27px;
+}
+
+.cart-tab .wrap-money .money{
+  display: block;
+  background-color: #EAE8FE;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap-acquired{
+  background-color: #fff;
+  height: 479px;
+  margin-top: 16px;
+  padding: 25px 26px 27px 26px;
+}
+
+.wrap-acquired > p{
+  display: block;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.wrap-acquired .cola-order-list{
+  height: 364px;
+  margin-top: 13px;
+}
+
+.wrap-acquired .total-money{
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 6px;
+  text-align: right;
+}
+
