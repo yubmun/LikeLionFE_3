@@ -3,13 +3,12 @@
 .wrapper{
   background-color: #EAE8FE;
   width: 100%;
-  height: 100vh;
+  height: 963px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .main-logo{
   display: block;
-  background-color: aqua;
   margin: 0 auto;
   width: 386px;
   height: 180px;
@@ -21,7 +20,6 @@
   gap: 28px;
   margin-top: 67px;
   width: inherit;
-  background-color:cornflowerblue;
   
 }
 
@@ -38,8 +36,11 @@
   flex-direction: column;
   width: 360px;
   height: 545px;
-  background-color:aquamarine;
 
+}
+
+button{
+  cursor: pointer;
 }
 
 /* order-tab */
@@ -53,39 +54,58 @@
   box-sizing: border-box;
 }
 
-.order-tab .cola-list button{
-  width: 94px;
-  height: 130px;
-}
-
 .cola-list-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 94px;
   height: 130px;
   background-color: white;
   border-radius: 10px;
   padding: 0;
+  border: 3px solid transparent;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+}
+
+.cola-list-item:hover,
+.cola-list-item:focus{
+  border: 3px solid #6327FE;
+  filter: none;
+}
+
+.sold-out:hover,
+.sold-out:focus{
   border: none;
   filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
 }
+.sold-out::after{
+  content:'';
+  border-radius: 10px;
+  width: 94px;
+  height: 130px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(./img/Sold-out.png);
+  background-size: 65px 55px;
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+}
+
 .cola-list-item img{
   width: 36px;
   height: 65px;
   margin-top: 11px;
 }
 
-.cola-list-item figcaption{
-  padding: 0 13px;
-  box-sizing: border-box;
-}
-
-.cola-list-item figcaption > p{
+.cola-list-item .item-name{
   font-size: 9px;
   font-weight: 500;
   line-height: 13px;
   margin-top: 2px;
   text-overflow: ellipsis;
 }
-.cola-list-item figcaption .price{
+.cola-list-item .price{
   display: block;
   width: 70px;
   height: 22px;
@@ -108,21 +128,55 @@
   height: 77px;
   row-gap: 11px;
   column-gap: 12px;
-  background-color:coral;
   margin-top: 20px;
 
 }
 
 .order-tab .calculator .balance{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #EAE8FE;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.order-tab .calculator .balance::before{
+  content:'잔액:';
+  margin-right: auto;
+}
+
+.order-tab .calculator .balance::after{
+  content:'원';
 }
 
 .order-tab .calculator button{
-  
+  background-color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
+  border-radius: 5px;
+}
+
+.order-tab .calculator .add-money-input{
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.order-tab .calculator .add-money-input::placeholder{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .wrap-cola-order-list{
-  background-color:chartreuse;
   margin-top: 11px;
   display: flex;
   gap: 12px;
@@ -133,18 +187,69 @@
   width: 100%;
   overflow-y: scroll;
   background-color: #EAE8FE;
-  padding: 12px 12px 12px 18px;
+  padding: 11px 11px 11px 11px;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+}
+
+.cola-order-list::-webkit-scrollbar{
+  width: 13px;
+}
+
+.cola-order-list::-webkit-scrollbar-thumb{
+  height: 79px;
+  width: 4px;
+  background-color: white;
+  border-radius: 50px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
 }
 
 .cola-order-list li{
-  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
   height: 46px;
   margin-bottom: 6px;
+  padding: 8px;
 }
+
+.cola-order-list li img{
+  width: 18px;
+  height: 33px;
+}
+
+.cola-order-list li p{
+  font-size: 9px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.cola-order-list li .count{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
 
 .wrap-cola-order-list button{
   width: 145px;
   height: 106px;
+  background-color: #6327FE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 /* cart-tab */
@@ -156,10 +261,26 @@
 }
 
 .cart-tab .wrap-money .money{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 10px;
   background-color: #EAE8FE;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
+}
+
+.cart-tab .wrap-money .money::before{
+  content:'소지금 :';
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.cart-tab .wrap-money .money::after{
+  content:'원';
 }
 
 .wrap-acquired{
@@ -171,7 +292,9 @@
 
 .wrap-acquired > p{
   display: block;
-  border: 1px solid #000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -186,5 +309,15 @@
   height: 20px;
   margin-top: 6px;
   text-align: right;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.wrap-acquired .total-money::before{
+  content:'총금액: ';
+}
+
+.wrap-acquired .total-money::after{
+  content:'원';
 }
 
