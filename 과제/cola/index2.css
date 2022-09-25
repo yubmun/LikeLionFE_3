@@ -321,3 +321,28 @@ button{
   content:'원';
 }
 
+@media(max-width:600px){
+  .tabs{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper{
+    width: 100%;
+    background-color: white;
+  }
+  .wrapper .main-logo{
+    width: 180px;
+    height: 80px;
+  }
+
+  .order-tab{
+    margin-top: -50px;
+  }
+
+  .cart-tab .wrap-money{
+    margin-top: -40px;
+  }
+  
+}
+
