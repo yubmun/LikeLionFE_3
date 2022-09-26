@@ -7,6 +7,15 @@
     <title></title>
 </head>
 <body>
-    <button>클릭</button>
+    <button id="cl">클릭</button>
+    <input type="number" id="num">
+
+    <script>
+      const button = document.querySelector('#cl');
+      const numb = document.querySelector('#num');
+      button.onclick = function(){
+        console.log(numb.value);
+      }
+    </script>
 </body>
 </html>
