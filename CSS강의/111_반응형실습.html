@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 실습</title>
+    <style>
+      body{
+        margin:0;
+        padding: 0;
+      }
+      h1,h2,h3,h4,h5,h6,p{
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+      .main{
+        display: flex;
+        justify-content: center;
+        margin: 240px auto;
+        gap: 102px;
+      }
+      .main-desc{}
+      .main-desc h1{
+        font-size: 70px;
+        line-height: 88px;
+        width: 680px;
+      }
+      .main-desc p {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .main-img a{
+        border-radius: 20px;
+        background: linear-gradient(0deg, rgba(18,19,20,0.8), rgba(18,19,20,0.8));
+        width: 486px;
+        height: 280px;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      .main-img a span{
+        font-weight: 700;
+        font-size: 30px;
+        
+      }
+      .main-img a p{
+        font-size: 16px;
+        align-self: flex-end;
+        
+      }
+      .main-img .first-img{
+        background-image: url(./img/background1.jpg);
+      }
+      .main-img .second-img{
+        margin-top: 20px;
+        background-image: url(./img/background2.jpg);
+      }
+      @media (max-width:834px){
+        .main{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 100px auto;
+        }
+        .main-desc h1{
+          width: 700px;
+          height: 264px;
+        }
+        .main-desc p{
+          margin-top: 20px;
+        }
+        .main-img {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+        .main-img a{
+          width: 344px;
+          height: 198px;
+        }
+        .main-img .second-img{
+          margin-top: 0;
+        }
+      }
+      @media (max-width: 390px){
+        
+      }
+    </style>
+</head>
+<body>
+    <main class="main">
+      <div class="main-desc">
+        <h1>위니브에서<br> <strong>함께 콘텐츠 제작하실<br> 분을 모십니다.</strong></h1>
+        <p>
+          <strong>위니브</strong>는 ICT 연구 및 (코딩)교육 기관이며<br> 다양한 사회 공헌 활동을 하고 있습니다.
+        </p>
+      </div>
+      <div class="main-img">
+        <a href="#" class="first-img">
+          <span>IT 교육 영상 콘텐츠</span>
+          <p>바로가기 ></p>
+        </a>
+        <a href="#" class="second-img">
+          <span>IT 서적</span>
+          <p>바로가기 ></p>
+        </a>
+      </div>
+    </main>
+</body>
+</html>
