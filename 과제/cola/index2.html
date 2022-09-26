@@ -68,9 +68,9 @@
         <fieldset class="calculator">
           <form>
             <span class="balance">1,000</span>
-            <button>거스름돈 반환</button>
-            <input type="number" class="add-money-input" placeholder="입금액 입력">
-            <button>입금</button>
+            <button id="back-money">거스름돈 반환</button>
+            <input type="number" class="add-money-input" placeholder="입금액 입력" id="input-how-much">
+            <button id="input-money">입금</button>
           </form>
         </fieldset>
 
@@ -87,14 +87,14 @@
               <span class="count">1</span>
             </li>
           </ul>
-          <button>획득</button>
+          <button id="get-item">획득</button>
         </div>
       </article>
 
       <article class="cart-tab">
         <h2 class="txt-hide">소지금과 획득한음료 탭</h2>
         <span class="wrap-money">
-          <span class="money">25,000</span>
+          <span class="money" id="have-money">25,000</span>
         </span>
 
         <div class="wrap-acquired">
@@ -156,5 +156,8 @@
       </article>
     </div>
   </section>
+
+  <script src="./index2.js"></script>
+
 </body>
 </html>
