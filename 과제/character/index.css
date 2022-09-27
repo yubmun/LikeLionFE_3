@@ -1,0 +1,374 @@
+@keyframes eye-work {
+  0%{
+    transform: translateX(1px);
+  }
+  50%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translate(1px);
+  }
+  
+}
+
+@keyframes teeth{
+  0%{
+    transform: translateX(-1px);
+  }
+  50%{
+    transform: translateX(1px);
+  }
+  100%{
+    transform: translateX(-1px);
+  }
+}
+
+@keyframes angry{
+  0%{
+    transform: scale(1) rotate(15deg);
+  }
+  50%{
+    transform: scale(1.2) rotate(30deg);
+  }
+  100%{
+    transform: scale(1) rotate(15deg);
+  }
+}
+
+@keyframes head-move{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes bodymove{
+  0%{
+    transform: translateY(3px);
+  }
+  50%{
+    transform: translateY(-3px)
+  }
+  100%{
+    transform: translateY(3px);
+  }
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.hulk{
+  border: 1px solid #000;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  animation: show 3s;
+}
+.head{
+  animation: head-move 2s infinite;
+}
+
+.hair .onehair{
+  position: absolute;
+  top: 40px;
+  left: 190px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.hair .twohair{
+  position: absolute;
+  top: 40px;
+  left: 270px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+.hair .threehair{
+  position: absolute;
+  top: 40px;
+  left: 320px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+
+.hair .fourhair{
+  position: absolute;
+  top: 35px;
+  left: 300px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.hair .fivehair{
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 50px solid black;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.face{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 80px;
+  border: 5px solid #000;
+  border-top: none;
+  left: 190px;
+  border-radius: 0 0 20% 20%;
+  background-color: #47983B;
+}
+
+.angry{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  position: absolute;
+  top:35px;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(15deg);
+  animation: angry 0.5s infinite;
+}
+.angry .angry-circle{
+  width: 5px;
+  height: 5px;
+  border: 5px solid #000;
+  border-radius: 20%;
+  
+}
+.angry .angry-circle:nth-child(1){
+  border-left: none;
+  border-top : none;
+  
+}
+.angry .angry-circle:nth-child(2){
+  border-top: none;
+  border-right: none;
+}
+.angry .angry-circle:nth-child(3){
+  border-bottom: none;
+  border-left: none;
+  margin-top: -8px;
+}
+.angry .angry-circle:nth-child(4){
+  border-bottom: none;
+  border-right: none;
+  margin-top: -8px;
+}
+
+
+.eyebrow{
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  border: 5px solid #000;
+  background-color: black;
+  border-radius: 80% 50% 70% 80%;
+}
+
+.eyebrow.left{
+  top: 30px;
+  left: 10px;
+  transform: rotate(40deg);
+}
+.eyebrow.right{
+  left: 118px;
+  top: 25px;
+  transform: rotate(140deg);
+}
+
+.eye{
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  border: 5px solid #000;
+  background-color: rgb(187, 183, 183);
+  box-shadow: 0 0 40px #070f06;
+
+}
+.eye.left{
+  top: 71px;
+  left: 20px;
+  border-radius: 7% 93% 29% 71% / 48% 44% 56% 52%;
+}
+.eye.left .pupil{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0 0 20px red;
+  left: 15px;
+  top: 3px;
+  animation: eye-work 0.1s infinite;
+}
+.eye.right{
+  left: 120px;
+  top: 70px;
+  border-radius: 7% 93% 29% 71% / 48% 44% 56% 52%;
+  transform: scaleX(-1);
+}
+
+.eye.right .pupil{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0 0 20px red;
+  left: 15px;
+  top: 3px;
+  animation: eye-work 0.1s infinite;
+
+}
+
+.nose{
+  width: 15px;
+  height: 50px;
+  position: absolute;
+  top: 80px;
+  left: 87px;
+  border: 5px solid #000;
+  border-radius: 100% 100% 30% 30%;
+  background-color: #47983B;
+}
+.big-nose{
+  width: 30px;
+  height: 8px;
+  position: absolute;
+  border: 5px solid #000;
+  bottom: -5px;
+  left: -12.1px;
+  border-radius: 100% 100% 30% 30%;
+  border-top: none;
+  background-color: #47983B;
+}
+
+.mouth{
+  width: 90px;
+  height: 48px;
+  border: 5px solid #000;
+  background-color: black;
+  position: absolute;
+  top: 145px;
+  left: 48px;
+  border-radius: 40%;
+}
+
+.mouth .teeth-top{
+  width: 85px;
+  height: 20px;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  border-radius: 70% 70% 0 0;
+  background-color: white;
+  border: 3px solid #000;
+  animation: eye-work 0.1s infinite;
+}
+.mouth .teeth-bottom{
+  width: 85px;
+  height: 23px;
+  position: absolute;
+  top: 23px;
+  left: 3px;
+  border-radius: 0 0 70% 70%;
+  background-color: white;
+  animation: teeth 0.1s infinite;
+}
+
+.teeth-top .teeth-line{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  left: 13px;
+}
+.teeth-top .teeth-line:nth-child(2){
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-right: none;
+  border-left: 3px solid black;
+  left: 64px;
+  
+}
+
+.teeth-bottom .teeth-line{
+  position: absolute;
+  width: 20px;
+  height: 23px;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  left: 13px;
+}
+
+.teeth-bottom .teeth-line:nth-child(2){
+  position: absolute;
+  width: 20px;
+  height: 23px;
+  border-right: none;
+  border-left: 3px solid black;
+  left: 64px;
+}
+
+.body{
+  width: 540px;
+  height: 500px;
+  position: absolute;
+  top: 150px;
+  left: 25px;
+  z-index: -1;
+  border-radius: 30% 30%;
+  border: 5px solid #000;
+  background-color: #3c7c32;
+  animation: bodymove 3s infinite;
+}
+.arm.right{
+  position: absolute;
+  left: 280px;
+  top: 140px;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #000;
+  border-radius: 35% 65% 29% 71% / 69% 73% 27% 31%;
+  transform: rotate(-10deg);
+  background-color: #326929;
+}
