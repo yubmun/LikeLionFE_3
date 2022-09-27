@@ -1,0 +1,22 @@
+@charset "UTF-8";
+// 한 줄 주석
+/*여러줄 주석*/
+ul{
+  li{
+    color: red;
+    font-size: 10px;
+  }
+}
+
+.one_{
+  color: red;
+}
+.two_{
+  color: green;
+  .three{
+    color: blue;
+  }
+  .four{
+    color: black;
+  }
+}
