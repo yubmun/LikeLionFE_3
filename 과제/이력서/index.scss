@@ -52,7 +52,6 @@ h1,h2,h3,h4,h5,h6,p,span,div,ul,li{
     }
   }
   .introduce{
-    border: 1px solid #000;
     h2{
       @include line;
     }
@@ -61,7 +60,6 @@ h1,h2,h3,h4,h5,h6,p,span,div,ul,li{
     }
   }
   .experience{
-    border: 1px solid #000;
     margin-top: 100px;
     h2{
       @include line;

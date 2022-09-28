@@ -43,9 +43,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, ul, li {
 .wrapper .header ul .xi-mail {
   margin-right: 6px;
 }
-.wrapper .introduce {
-  border: 1px solid #000;
-}
 .wrapper .introduce h2 {
   border-bottom: 3px solid #888;
   padding-bottom: 5px;
@@ -54,7 +51,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, ul, li {
   margin-top: 15px;
 }
 .wrapper .experience {
-  border: 1px solid #000;
   margin-top: 100px;
 }
 .wrapper .experience h2 {
