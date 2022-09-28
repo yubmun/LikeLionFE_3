@@ -1,0 +1,90 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 800px;
+  height: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.wrapper .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.wrapper .header .name {
+  margin-left: 180px;
+  text-align: left;
+}
+.wrapper .header h1 {
+  font-size: 45px;
+}
+.wrapper .header ul {
+  list-style: none;
+  margin-right: auto;
+  margin-left: 150px;
+}
+.wrapper .header ul .xi-call {
+  margin-right: 10px;
+}
+.wrapper .header ul .xi-mail {
+  margin-right: 6px;
+}
+.wrapper .introduce {
+  border: 1px solid #000;
+}
+.wrapper .introduce h2 {
+  border-bottom: 3px solid #888;
+  padding-bottom: 5px;
+}
+.wrapper .introduce p {
+  margin-top: 15px;
+}
+.wrapper .experience {
+  border: 1px solid #000;
+  margin-top: 100px;
+}
+.wrapper .experience h2 {
+  border-bottom: 3px solid #888;
+  padding-bottom: 5px;
+}
+.wrapper .experience .social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.wrapper .experience .social .ex p {
+  margin-top: 12px;
+}
+.wrapper .activity {
+  margin-top: 100px;
+}
+.wrapper .activity h2 {
+  border-bottom: 3px solid #888;
+  padding-bottom: 5px;
+}
+.wrapper .activity .lion {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.wrapper .activity .lion .ex p {
+  margin-top: 12px;
+}
+.wrapper .footer h2 {
+  border-bottom: 3px solid #888;
+  padding-bottom: 5px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,101 @@
+// 변수
+$font-header: 26px;
+$font-main: 16px;
+$font-main-strong: 20px;
+$font-footer: 16px;
+@mixin line{
+  border-bottom: 3px solid #888;
+  padding-bottom: 5px;
+}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,span,div,ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 800px;
+  height: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    .name{
+      margin-left: 180px;
+      text-align: left;
+    }
+    h1{
+      font-size: 45px;
+    }
+    ul{
+      list-style: none;
+      margin-right: auto;
+      margin-left: 150px;
+      .xi-call{
+        margin-right: 10px;
+      }
+      .xi-mail{
+        margin-right: 6px;
+      }
+    }
+  }
+  .introduce{
+    border: 1px solid #000;
+    h2{
+      @include line;
+    }
+    p{
+      margin-top: 15px;
+    }
+  }
+  .experience{
+    border: 1px solid #000;
+    margin-top: 100px;
+    h2{
+      @include line;
+    }
+    .social{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .ex{
+        p{
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  .activity{
+    margin-top: 100px;
+    h2{
+      @include line;
+    }
+    .lion{
+      display:flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .ex{
+        p{
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  .footer{
+    h2{
+      @include line;
+    }
+  }
+}
