@@ -1,0 +1,36 @@
+// number
+$one : 1;
+
+// strings
+$two : './assets/img/';
+$three : 'background.png';
+.test{
+  background-image: url($two + $three);
+}
+
+// color
+$four : #fff;
+
+//booleans(참,거짓)
+$five : true;
+
+//null
+$six : null;
+
+// list(0번쨰가 아니라 1번째부터)
+$font-size : 10px 12px 16px;
+// $image-file : photo_01, photo_02, photo_03;
+
+.test2{
+  font-size: nth($list: $font-size, $n:2);
+}
+.test3{
+  font-size: nth($font-size, 2);
+}
+
+// map (선언되지 않은 속성값은 컴파일이 안된다)
+$font-weights : ("regular": 400, "medium": 500, "bold": 700);
+
+.test4{
+  font-weight: map-get($font-weights, "medium")
+}

@@ -1,0 +1,27 @@
+.info{
+  $line-normal : 1.34; //지역변수
+  $line-me: 2.14;
+  font-size: 15px;
+  line-height: $line-normal;
+  text-align: right;
+  .one{
+    line-height: $line-normal;
+  }
+}
+
+// .one{
+//   line-height: $line-me;
+//   // 이것도 적용 안됨.
+// }
+
+
+// // info 밖에서는 안됨.
+// .one{
+//   line-height: $line-normal;
+// }
+
+$font-size:14px;
+
+.one{
+  font-size: $font-size;
+}

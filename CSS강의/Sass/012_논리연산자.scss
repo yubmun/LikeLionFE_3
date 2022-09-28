@@ -1,0 +1,12 @@
+@debug not true; //false
+@debug not false; //true
+
+@debug true and true; //true
+@debug true and false; //false
+
+@debug true or false; //true
+@debug false or flase; //false
+
+// and 곱
+// or 합
+// not 부정

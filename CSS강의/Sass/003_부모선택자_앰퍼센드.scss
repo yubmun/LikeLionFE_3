@@ -1,21 +1,27 @@
 .box{
-  &:focus{}
-  &:hover{}
-  &:active{}
-  &:first-child{}
-  &:nth-child(){}
-  &:
-}
-
-
-
-
-.box{
   height: 100px;
   width: 100px;
   background-color: red;
   transition: all 0.5s;
   &:hover {
     background-color: blue;
+  }
+}
+
+.box{
+  &-yellow{
+    background-color: yellow;
+  }
+  &-red{
+    background-color: red;
+  }
+}
+
+.btn{
+  &-submit{
+    background-color: yellow;
+  }
+  &-close{
+    background-color: red;
   }
 }

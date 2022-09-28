@@ -1,0 +1,21 @@
+// @mixin 이름(매개변수) //생성
+// @include 이름(인수) //사용
+
+//파선아실
+
+
+@mixin center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  @include center-xy;
+  background-color: gray;
+}
+
+.aside{
+  @include center-xy;
+  background-color: white;
+}

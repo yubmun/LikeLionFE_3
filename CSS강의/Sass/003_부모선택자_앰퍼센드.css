@@ -6,4 +6,18 @@
 }
 .box:hover {
   background-color: blue;
+}
+
+.box-yellow {
+  background-color: yellow;
+}
+.box-red {
+  background-color: red;
+}
+
+.btn-submit {
+  background-color: yellow;
+}
+.btn-close {
+  background-color: red;
 }/*# sourceMappingURL=003_부모선택자_앰퍼센드.css.map */
