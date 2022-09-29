@@ -83,4 +83,24 @@ h1, h2, h3, h4, h5, h6, p, span, div, ul, li {
 .wrapper .footer h2 {
   border-bottom: 3px solid #888;
   padding-bottom: 5px;
+}
+.wrapper .footer .skill {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.wrapper .footer .skill i {
+  font-size: 80px;
+}
+.wrapper .footer .skill i.fa-html5 {
+  color: #FF5722;
+}
+.wrapper .footer .skill i.fa-css3-alt {
+  color: #2965F1;
+}
+.wrapper .footer .skill i.fa-js {
+  color: #F0DB4F;
+}
+.wrapper .footer .skill i.fa-sass {
+  color: #CE679A;
 }/*# sourceMappingURL=index.css.map */
