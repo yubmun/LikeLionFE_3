@@ -27,3 +27,10 @@ inputMoney.onclick = function(e){
   }
 }
 
+const colaItem = document.querySelector('#cola-item');
+
+colaItem.onclick = function(e){
+  e.preventDefault();
+  console.log('찍히나?');
+}
+
