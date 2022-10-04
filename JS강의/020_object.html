@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+      //Object
+      function sum(x,y){
+        return x+y;
+      }
+
+      console.log(sum);
+      console.log(typeof sum);
+
+      let newuser = {
+        id : 'licat',
+        pw : '1234',
+        name : 'leehojun',
+        email : 'paul@weniv.com',
+        active : false
+      }
+
+      console.log(newuser['id']);
+      console.log(newuser.id);
+
+      let user = [
+        {
+          id : 'licat',
+          pw : '1234',
+          name : 'leehojun',
+          email : 'paul@weniv.com',
+          active : true
+        }, {
+          id : 'lion',
+          pw : '2345',
+          name : 'leehojun',
+          email : 'paul@weniv.com',
+          active : true
+        }
+      ]
+      // 해쉬 테이블이라고 함.
+
+      console.log(user[0]['id']);
+
+      let a = 10;
+      let b = 20;
+      let c = 30;
+      let e = {a,b,c};
+      console.log(e);
+      e['a'] = 50; // 값을 변경할 수 있다.
+      a = e['a'];
+      console.log(e);
+      console.log(a);
+
+      // key 값으로 문자열 외에 다른 값이 들어갔을 경우
+      let txt = 'hello';
+      let txt2 ={
+        0: 'h',
+        1: 'e',
+        2 : 'l',
+        3: 'l',
+        4: 'o'
+      }
+      console.log(txt[1]); // e
+      console.log(txt2[1]); // 'e' 유사 배열 객체
+      // 키값이 숫자이면, [] 접근시, 숫자로만 써도 되고, ''로 감싸서 써도 접근이 된다.
+
+
+      // console.log(txt2.1); map으로 써야됨
+      // console.log(txt2.{'one':1}) map으로 써야됨
+
+      // value의 값으로 문자열 외에 다른 값을 넣었을 경우
+      let test = {
+        one : sum,
+        two : console.log,
+        three : window.innerWidth,
+        four : [10, 20, 30],
+        five : '10',
+        six : 100
+      }
+      console.log(test);
+      test.two('호준!!');
+      test['two']('이렇게도된다.');
+      console.log(test.three);
+      console.log(test['three']);
+      console.log(test.four[1]); // 20
+
+      // key 와 value만 뽑아낼 수 없을까?
+      console.log(newuser.keys); // undefined
+      console.log(Object.keys(newuser)); // K 만 
+      console.log(Object.values(newuser)); // V 만
+      console.log(Object.entries(newuser)); //객체 K,V 전부
+
+      // 위 기능은 map에서 쓸 수 있음
+      // newuser.keys();
+      // newuser.values();
+      // map 은 나중에 new Map() 으로 만든 객체에서만 쓰는거란다.
+
+      // object spread 용법
+
+      // let newuser = {
+      //   id : 'licat',
+      //   pw : '1234',
+      //   name : 'leehojun',
+      //   email : 'paul@weniv.com',
+      //   active : false
+      // }
+
+      let 회원정보업데이트 = {
+        name : 'cat',
+        email : 'jun@naver.com'
+      }
+      // newuser['name'] = 회원정보업데이트['name']
+      // newuser['email'] = 회원정보업데이트['email']
+      // 위처럼 업데이트를 할 수 있다. 하지만, 아래의 spread 용법으로도 업데이트가 가능하다. 아래꺼로 쓰도록 하자.
+      newuser = {...newuser, ...회원정보업데이트};
+      let newuser3 = {...newuser};
+      console.log(newuser);
+
+      // let newuser2 = newuser;
+      // newuser2['id'] = 'helloworld';
+      // console.log(newuser);
+      // console.log(newuser2);
+      // 위처럼 바꾸면 newuser와 newuser2가 모두 변함
+
+      let newuser2 = {...newuser};
+      newuser2['id'] = 'helloworld';
+      console.log(newuser);
+      console.log(newuser2);
+      // spread 용법을 쓰면 둘이 다른 유저가 될 수 있다.
+    </script>
+</body>
+</html>

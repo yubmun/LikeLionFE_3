@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bool</title>
+</head>
+<body>
+    <script>
+      // const(참조변경 불가), let(변경 가능), var(X)
+      // var를 쓰는건, 견고한 코딩이 불가하다.
+      let one = true; // 다른 언어는 True인 경우도 있음.
+      let two = false;
+
+      console.log(Boolean('')); // false
+      one = ''; // one을 재할당했으므로 아래 if문에서는 else 실행 값이 나온다.
+
+      console.log(Boolean(' ')); // true
+      //띄어쓰기, 공백이 있다면, true가 된다.
+
+      console.log(Boolean(0)); // false
+      console.log(Boolean(-100)); // 0외에 다른숫자는 true
+      console.log(Boolean(undefined)); // false
+      console.log(Boolean(null)); // false
+      console.log(Boolean(Infinity)); // true
+
+      // 우리를 힘들게 하는 JS
+      console.log(Boolean([])); // true
+      // 다른 언어에서는 [] 빈 배열은 false이다.
+      
+
+      console.log(Boolean({})); // true
+      // 빈 객체도 true 값이 나오는것.
+
+
+      if(one){
+        console.log('hello');
+      } else{
+        console.log('world');
+      }
+    </script>
+</body>
+</html>
