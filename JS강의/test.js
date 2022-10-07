@@ -12,14 +12,14 @@ function groupBy(objectArray, property) {
       acc[key] = [];
     }
     acc[key].push(obj);
-    console.log(acc , '두번째');
-    console.log(acc[key], '첫번째');
     
     return acc;
   }, {});
 }
 
 var groupedPeople = groupBy(people, 'age');
+
+console.log(groupedPeople);
 // groupedPeople is:
 // {
 //   20: [
