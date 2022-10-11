@@ -5,7 +5,8 @@ function 제곱(x) {
   return 승수
 }
 
-let 제곱2 = 제곱(2)
+let 제곱2 = 제곱(2) // y ** 2
+console.log(제곱(2)(3));
 
 제곱2(3)
 제곱2(10)
@@ -21,7 +22,6 @@ console.log(제곱(2)(3))
 
 
 ///////////
-
 function makeAdder(x) {
   var y = 1;
   return function(z) {
@@ -31,6 +31,7 @@ function makeAdder(x) {
 }
 
 var add5 = makeAdder(5);
+console.log(typeof add5);
 var add10 = makeAdder(10);
 //클로저에 x와 y의 환경이 저장됨
 
