@@ -24,7 +24,7 @@ function Book(책이름, 책가격, 저자, 출판일){
 // console.log(data) // undefined
 
 let book1 = new Book('HTML', 10, '유진', '22.12.30')
-let book2 = Book('CSS', 20, '유진', '23.12.30')
+let book2 = new Book('CSS', 20, '유진', '23.12.30')
 let book3 = new Book('JS', 30, '유진', '24.12.30')
 
 console.log(book1, book2, book3)
