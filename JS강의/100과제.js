@@ -58,8 +58,21 @@ let 정답 = result.reduce((a,b)=>a+b);
 
 /**
  * 반복문만 사용하여 숫자단위 콤마 찍기
- * 답이어딨지
+ * 뒤부터 시작하면 쉽다고 함
  */
+function 쉼표(xxx){
+  let str = String(xxx);
+  let ar = str.split('').reverse();
+  for(let i=0; i < ar.length; i++){
+    if(i % 4 === 0){
+      ar.splice(i,0,',');
+    }
+  }
+  ar.reverse().pop(1);
+
+  return console.log(ar.join(''));
+}
+// 쉼표(1000);
 
 
 /**
