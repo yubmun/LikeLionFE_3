@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom실습</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .box {
+    width: 400px;
+    height: 400px;
+    text-align: 0 auto;
+    background-color: black;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+  }
+
+  .box.red {
+    background-color: red;
+  }
+
+  .box.yellow {
+    background-color: yellow;
+  }
+
+  .box.green {
+    background-color: green;
+  }
+</style>
+
+<body>
+  <div class="box"></div>
+  <ul>
+    <li><button id="red">빨강</button></li>
+    <li><button id="yellow">노랑</button></li>
+    <li><button id="green">초록</button></li>
+  </ul>
+  <script>
+    const box = document.querySelector('.box');
+    const red = document.querySelector('#red');
+    const yellow = document.querySelector('#yellow');
+    const green = document.querySelector('#green');
+
+    red.addEventListener('click', function () {
+      box.classList.add("red");
+      box.classList.remove('yellow', 'green');
+    })
+    yellow.addEventListener('click', function () {
+      box.classList.add('yellow');
+      box.classList.remove('red', 'green');
+    })
+    green.addEventListener('click', function () {
+      box.classList.add('green');
+      box.classList.remove('red', 'yellow');
+    })
+
+    // const btnArr = [red, yellow, green];
+    
+    // btnArr.forEach(function(item){
+    //   item.addEventListener('click', ()=>{
+    //     box.classList.remove('red','yellow','green');
+    //     if(item.classList.contains('red')){
+    //       box.classList.add('red');
+    //     } else if (item.classList.contains('yellow')){
+    //       box.classList.add('yellow');
+    //     } else if(item.classList.contains('green')){
+    //       box.classList.add('green');
+    //     }
+    //   })
+    // })
+  </script>
+</body>
+
+</html>

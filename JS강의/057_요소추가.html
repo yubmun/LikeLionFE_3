@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소추가</title>
+</head>
+
+<body>
+  <p></p>
+  <input type="text">
+  <button>Write Something!</button>
+
+  <script>
+    const myBtn = document.querySelector("button");
+    const myP = document.querySelector("p");
+    const myInput = document.querySelector("input");
+
+    myBtn.addEventListener('click', function () {
+      myP.textContent = myInput.value;
+    });
+    myInput.addEventListener('input', function () {
+      myP.textContent = myInput.value;
+    });
+    // textContent랑 innerText랑 차이가 뭘까?
+    // innerText는 사람이 읽을 수 있는 요소만 처리한다. 태그들의 속성이나, 숨기는 애들은 보이지 않게 처리.
+
+    myP.innerHTML = "<strong>I'm Strong!</strong>";
+    myP.outerHTML = "<div></div>";
+  </script>
+</body>
+
+</html>

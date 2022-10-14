@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+  <!-- <div id="myDiv" class="yourDiv">div 입니다.</div>
+  <div id="myDiv">div 입니다.</div>
+  <div id="myDiv">div 입니다.</div>
+  <div id="myDiv">div 입니다.</div>
+  <div id="myDiv">div 입니다.</div> -->
+
+  점심 식단
+  <article id="container">
+      <ul>
+          <li>탕수육</li>
+          <li class="item-second">유산슬</li>
+          <li>짜장면</li>
+      </ul>
+  </article>
+
+  저녁 식단
+  <article>
+      <ul>
+          <li>된장국</li>
+          <li class="item-second">김치찌게</li>
+          <li>해장국</li>
+      </ul>
+  </article>
+
+    <script>
+      // //id로 접근
+      // document.getElementById('myDiv');
+
+      // const myDiv = document.getElementById('myDiv');
+
+      // //해당하는 모든 요소에 접근하기
+      // documnet.getElementsByTagName('div');
+
+      // //클래스로 접근하는 방법
+      // documnet.getElementsByClassName('yourDiv');
+
+      //배운방법으로 HTML요소에서 첫번째 item-second랑 첫번째 li 를 콘솔로 출력해보자.
+
+      console.log(document.getElementsByClassName('item-second')[0]);
+      console.log(document.getElementsByTagName('li')[0]);
+
+      // 검색을 더욱 빠르게 하는 법
+      const container = document.getElementById('container');
+      console.log(container.document.getElementsByClassName('item-second')[0]);
+      console.log(container.document.getElementsByTagName('li')[0])
+
+      console.log(document.querySelector('.item-second'));
+    </script>
+</body>
+</html>
