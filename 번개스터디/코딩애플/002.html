@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alert기능</title>
+  <link rel="stylesheet" href="002.css">
+</head>
+<body>
+  
+  <!-- HTML/CSS 로 미리 디자인, JS로 기능하기 만들기 -->
+  <div class="alert-box" id="box">
+    <p id="content">알림창임</p>
+    <button id="close">X</button>
+  </div>
+
+  <button onclick="openAlert('block','아이디를 입력하세요');" id="btn1">버튼1</button>
+  <button onclick="openAlert('block', '비번입력하세요');" id="btn2">버튼2</button>
+  
+  <script>
+    document.getElementById('close').addEventListener('click', () => openAlert('none'));
+
+    // 긴 코드를 짧은 단어로 축약하는 법, 함수를 만든다. script 태그를 밑에다 작성하는 이유는, 코드 진행 순서가 위에서부터 아래로 진행되기 때문이다.
+    function openAlert(구멍, b){
+      document.getElementById('box').style.display= 구멍;
+      document.getElementById('content').innerHTML = b;
+    }
+    // function 업그레이드 버전 파라미터를 제공하는 버전. 똑같은 함수를 두개 작성하지 않아도 아규먼트를 삽입하여 결과값을 바꿀 수 있다.
+
+    // 버튼 1 누르면 아이디 입력하세요 (p태그가)
+    // 버튼 2 누르면 비번입력하세요 (p태그가)
+    // a는 누르는 버튼, b는 변경할 내용
+
+    // getElementsByClassName 은 해당 클래스 이름을 가진 모든 요소를 찾아주기 때문에, [0], [1] 등 인덱싱으로 선택을 해야 한다.
+
+
+
+    
+
+  
+  </script>
+
+</body>
+</html>
