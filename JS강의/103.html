@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+      class Person{
+        constructor(name, age, address){
+          this.name = name;
+          this.age = age;
+          this.address = address;
+        }
+
+        sayProfile(){
+          console.log(`이름은${this.name}, 나이는${this.age}살, 주소는${this.address} 입니다.`);
+        }
+      }
+
+      const leejunyub = new Person('leejunyub', '29', '목동중앙서로8가길 25-12');
+      const kimkimkim = new Person('김김김', '19', '목동중앙');
+    </script>
+</body>
+</html>

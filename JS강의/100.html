@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const me = {
+      name: '웨이드',
+      address: '제주도 제주시 인다 1길',
+      phoneNum: '010-8001-6536',
+      canWalk: function () {
+        console.log('웨이드가 걷는다.');
+      },
+      teaching: function (student) {
+        student.levelUp();
+      }
+    }
+    const student = {
+      level: 1,
+      levelUp: function () {
+        this.level++;
+      }
+    }
+    me.teaching(student);
+
+    const junyub = {
+      name: '이준엽',
+      address: '목동중앙서로8가길 25-12',
+      phoneNum: '010-2333-0678',
+      studing: function(js){
+        js.levelUp();
+      }
+    }
+    const js = {
+      level: 1,
+      levelUp: function(){
+        this.level++;
+      }
+    }
+
+
+    junyub.studing(js);
+
+    // 음식 이름의 배열을 전달하면, 배열 안에서 랜덤하게 메뉴를 뽑아내는 로봇객체의 생성자를 만들어보자.
+    function SelectMenu(arr){
+      this.arr = arr;
+      const chosenFood = arr[Math.floor(Math.random()*arr.length)];
+    }
+    SelectMenu.prototype.choice = function(){
+      return(`선택된 메뉴는 ${chosenFood} 입니다.`)
+    }
+
+    let what = new SelectMenu(['피자', '냉면', '라면', '초밥']);
+
+    console.log(what.__proto__ === SelectMenu.prototype);
+
+    // /**
+    //  * 만들었던 음식 로봇 객체의 메서드를 프로토타입으로 분리하라. 그리고 객체의 메서드로 동일한 주소를 참조하는지 확인해라.
+    //  * 
+    //  * 객체지향개념에서 만들었던 나와 대상객체를 생성자를 통해서 만들어볼 수 있도록 코드를 수정하라.
+    //  *
+    function Person(name, age, address){
+      this.name = name;
+      this.age = age;
+      this.address = address;
+    };
+    Person.prototype.introduce = function(){
+      console.log(`제 이름은 ${name}이고, 나이는 ${age}살, 주소는 ${address} 입니다.`);
+    };
+
+    const leejunyub = new Person('이준엽', '29', '목동중앙서로8가길 25-12');
+    const leejunsu = new Person('이준수', '19', '목동중앙서로8가길 25');
+    leejunyub.introduce();
+  </script>
+</body>
+
+</html>
