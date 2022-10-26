@@ -46,3 +46,6 @@ fetch('https://learn.codeit.kr/api/members', {
 // fetch로 method, body 등 프로퍼티를 추가하여 조회 추가 수정 삭제 등을 할 수 있다.
 .then((response) => response.text())
 .then((result) => {console.log(result);});
+
+// method: 'DELETE' 는 body에 내용을 담을 필요가 없다.
+// 삭제할 내용이기 때문이다. 삭제될 데이터는 URL로 보낸다.
