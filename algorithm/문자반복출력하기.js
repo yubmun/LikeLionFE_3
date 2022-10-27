@@ -13,3 +13,5 @@ function solution(my_string, n) {
 
 // my_string.split('').map(v=> v.repeat(n)).join('');
 // 킹도영.
+// [...my_string].map(e=>e.repeat(n)).join('');
+// 갓지혜
