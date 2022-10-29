@@ -20,3 +20,14 @@ function solution(letter) {
 }
 
 // for in이 for문 안으로 들어와야 정답처리가 되는 이유에 대해 잘 모르겠음.
+
+/**
+ * for(const sign in morse){
+ *   for(let i=0; i<arr.length; i++){
+ *     if(sign === arr[i]){
+ *       answer += morse[sign];
+ *     }
+ *   }
+ * }
+ * 이건 왜 결과값이 다르게 나오는가?
+ */
