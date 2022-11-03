@@ -1,6 +1,6 @@
 const stack = []; // 스택 공간
 const STACK_SIZE = 5; // 스택의 최대 사이즈
-let top = 0; // 초기값 필요
+let top = -1; // 초기값 필요
 
 /**
  * 조건
@@ -18,47 +18,40 @@ function init() {
   for(let i=0; i < STACK_SIZE; i++){
     stack[i] = null;
   }
-  return stack;
+
 }
-// init();
-// console.log(stack);
+
 /**
  * stack에 값을 집어 넣는다.
  */
-function push(num) {
-  for(let i=0; i < STACK_SIZE; i++){
-    if(stack[i] === null){
-      stack[i] = num;
-      top = num;
-      break;
-    }
+function push(value) {
+  if(top === STACK_SIZE -1){
+    console.log("stack over flow!");
+    return;
   }
-  if(stack.indexOf(null) === -1){
-    console.log("Error");
-  }
-  return stack;
+  ++top;
+  stack[0] = value;
 }
 
 /**
  * stack에서 값을 빼낸다.
  */
 function pop() {
-  for(let i=STACK_SIZE; i >= 0; i--){
-    if(stack[i] === top){
-      let j = stack[i];
-      stack[i] = null;
-      top = stack[i-1];
-      return j;
-    }
+  if(top < 0){
+    return -1;
   }
-  
+  const value = stack[top];
+  stack[top] = null;
+  --top;
+  return value;
+  // return stack[top--];
 }
 
 /**
  * 현재 top의 위치를 반환한다.
  */
 function peek() {
-  return stack.indexOf(top);
+  return top;
 }
 
 console.log(init()); // [null, null, null, null, null]
@@ -67,3 +60,7 @@ console.log(push(10)); // [5, 10, null, null, null]
 console.log(peek()); // 10 반환
 console.log(pop()); // [5, null, null, null, null] -> 10반환
 console.log(peek()); // 5 반환
+
+/**
+ * 예외처리는 맨 위에서 작성해주는게 편하다.
+ */
