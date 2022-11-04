@@ -11,4 +11,6 @@
  * 
  * some every둘다 빈배열이 대상이라면, 반복횟수없이
  * some은 false, every는 true를 반환함.
+ * 
+ * 둘다 콜백함수로, 조건을 넣어줘야됨. arr.some((x)=> x > 10) 처럼
  */
