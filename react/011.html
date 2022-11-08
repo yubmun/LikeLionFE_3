@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>리액트 1분만에 추가해보기!</title>
+</head>
+
+<body>
+  <!-- <div id="root">
+    <main>
+      <header>
+        <h1>weniv 홈페이지</h1>
+        <div>메뉴</div>
+      </header>
+      <section>
+        <p>제품 소개</p>
+      </section>
+      <section>
+        <p>회사 소개</p>
+      </section>
+      <section>
+        <p>팀 소개</p>
+      </section>
+      <footer>
+        <p>회사 정보</p>
+      </footer>
+    </main>
+  </div> -->
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    function 자기소개(props){
+      return (
+        <div>
+          <p>제 이름은{props.name}</p>
+          <p>제 나이는{props.age}</p>
+          <p>제 통장엔{props.money}</p>
+          <p>제 집은{props.house}</p>
+          <p>제 커피는{props.coffee}</p>
+        </div>
+      )
+    }
+
+    function 자기소개2(hojun){
+      return (
+        <div>
+          <p>제 이름은{hojun.name}</p>
+          <p>제 나이는{hojun.age}</p>
+          <p>제 통장엔{hojun.money}</p>
+          <p>제 집은{hojun.house}</p>
+          <p>제 커피는{hojun.coffee}</p>
+        </div>
+      )
+    }
+
+    function 자기소개3({name, age, money, house, coffee}){
+      return (
+        <div>
+          <p>제 이름은{name}</p>
+          <p>제 나이는{age}</p>
+          <p>제 통장엔{money}</p>
+          <p>제 집은{house}</p>
+          <p>제 커피는{coffee}</p>
+        </div>
+      )
+    }
+
+    const app = (
+      <main>
+        <자기소개
+          name="hojun"
+          age="10"
+          money="1000"
+          house="null"
+          coffee="full"
+        />
+        {자기소개({
+          name: "hojun",
+          age: "10",
+          money: "1000",
+          house: "null",
+          coffee: "full"
+        })}
+        <자기소개2
+          name="hojun"
+          age="10"
+          money={1000} //숫자로 넣고싶다면 중괄호를.
+          house="null"
+          coffee="full"
+        />
+        <자기소개3
+          name="junyub"
+          age="10"
+          money={1000} //숫자로 넣고싶다면 중괄호를.
+          house="null"
+          coffee="full"
+        />
+      </main>
+    )
+
+    const domContainer = document.querySelector("#root");
+    ReactDOM.render(app, domContainer);
+  </script>
+</body>
+
+</html>
