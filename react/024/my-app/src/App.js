@@ -1,50 +1,37 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-const Login = () => {
-  const [id, setId] = useState("")
-  const [pw, setPw] = useState("")
+function Resume({이름, 취미, 자기소개}){
+  const [like, setLike] = useState(0) 
+  // const [like, setLike] = useState(100) 
+  // const [like, setLike] = useState('hello world') 
 
-  const handleLoginSubmit = (e) =>{
-    console.log('로그인 버튼을 클릭하셨습니다. 로그인 정보가 들어왔습니다.')
-    e.preventDefault()
-    console.log('막혔다!')
-    alert(`id : ${id} pw : ${pw}`)
-  }
-
-  const handleIdInput = (e) => {
-    console.log('아이디가 수정되었습니다.')
-    // 실시간으로 정규표현식을 사용해서 이상한 문자열이 포함되진 않았는지
-    // console.log(e)
-    // console.log(e.target)
-    // console.log(e.target.value)
-    setId(e.target.value)
-  }
-
-  const handlePwInput = (e) => {
-    console.log('패스워드가 수정되었습니다.')
-    setPw(e.target.value)
+  function handleClickLike(){
+    // like += 1
+    setLike(like + 1); // like = like + 1
+    // setLike(like + 2); // like = like + 2
+    // setLike(like + 'hello' + 'world'); // like = like + 'hello' + 'world'
+    console.log(like)
   }
 
   return (
-    <form action="" onSubmit={handleLoginSubmit}>
-      <label>
-        아이디 :
-        <input type="text" onChange={handleIdInput}/>
-      </label>
-      <label>
-        패스워드 :
-        <input type="password" onChange={handlePwInput}/>
-      </label>
-      <button type="submit">로그인</button>
-    </form>
+    <section>
+      <h2>{이름}</h2>
+      <p>{취미}</p>
+      <p>{자기소개}</p>
+      <button onClick={handleClickLike}>{like}</button>
+    </section>
   )
 }
 
 function App() {
   return (
-    <div>
-      <Login/>
-    </div>
+    <main>
+      <Resume 
+        이름="이호준" 
+        취미="코딩" 
+        자기소개="안녕하세요. 제주코딩베이스캠프 이호준입니다."
+      />
+    </main>
   );
 }
 
