@@ -18,6 +18,7 @@ export default function Homepage({id, email, img}){
     </div>
   )
 }
+
 // export default function Homepage(props){
 //   return(
 //     <div>

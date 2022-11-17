@@ -23,29 +23,23 @@ const productList = {
   ],
 };
 
-// function solution(productList){
-//   let result = [];
-//   for(const i of productList.products){
-//     result.push(
-//       <section key={i.id}>
-//         <h2>{i.title}</h2>
-//         <p>{i.price}원</p>
-//       </section>
-//     )
-//   }
-//   return result;
-// }
+function solution(productList){
+  let result = [];
+  for(const i of productList.products){
+    result.push(
+      <section key={i.id}>
+        <h2>{i.title}</h2>
+        <p>{i.price}원</p>
+      </section>
+    )
+  }
+  return result;
+}
 
 export default function App() {
   return (
     <div>
-      {/* {solution(productList)} */}
-      {productList.products.map((v,i)=>{
-        <section key={v.id}>
-          <h2>{i}{v.title}</h2>
-          <p>{v.price}</p>
-        </section>
-      })}
+      {solution(productList)}
     </div>
   )
 }
