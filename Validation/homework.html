@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+</head>
+<body>
+    <form action="">
+      <label for="password">비밀번호를 입력하세요</label>
+      <input id="password" type="password" required pattern="(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}">
+
+      <label for="passwordCheck">비밀번호 확인</label>
+      <input id="passwordCheck" type="password" required pattern="(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}">
+
+      <button>제출</button>
+    </form>
+
+    <script>
+      const inp = document.querySelectorAll('input');
+      const btn = document.querySelector('button');
+      const pw = document.querySelector('#password')
+
+      btn.addEventListener('click', ()=>{
+        inp.forEach((item)=>{
+          validate(item);
+        })
+      })
+      function validate(target){
+        if(target.validity.valueMissing){
+          target.setCustomValidity('값을 입력해주세요.');
+        } else if(target.id === 'passwordCheck'){
+          if(target.value !== pw.value){
+            target.setCustomValidity('비밀번호가 일치하지 않습니다.');
+          } else{
+            target.setCustomValidity('');
+          }
+        } else if(target.validity.patternMismatch){
+          target.setCustomValidity('비밀번호는 대문자,소문자, 숫자, 특수문자로 이루어져야 합니다.');
+        } else {
+          target.setCustomValidity('');
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      label{
+        display: block;
+      }
+      /* 해당속성을 required가 없는 input과 시각적인 구분을 가능하게 함 */
+      input:required{
+        border: 5px solid green;
+      }
+      /* 올바르지 않은 입력이 이루어진 input을 선택 */
+      input:invalid{
+        border: 5px solid red;
+      }
+      /* 올바른 입력이 이루어진 경우 */
+      input:valid{
+        border: 5px solid blue;
+      }
+
+      /* 중첩시켜서 style을 적용할 수 있음. */
+      input:required:invalid{
+        border: 5px solid teal;
+      }
+    </style>
+</head>
+<body>
+    <input type="text" required minlength="6" maxlength="12">
+    <!-- HTML에서 기본적으로 제공하는 validation -->
+
+    <form action="">
+      <label for="stuff">원하는 수량을 입력하세요(최소 3개 이상)</label>
+      <input id="stuff" type="number" min="3">
+
+      <label for="email">이메일을 입력하세요</label>
+      <input id="email" type="email" required maxlength="20">
+
+      <button type="submit">제출</button>
+    </form>
+</body>
+</html>
