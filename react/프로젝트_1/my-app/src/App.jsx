@@ -7,6 +7,7 @@ import './app.css'
 function App() {
   return (
     <HomePage/>
+    // HomePage 컴포넌트를 통해 App으로 전송
   );
 }
 
