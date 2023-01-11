@@ -1,16 +1,20 @@
 import React from "react";
 
 
-function Result({keyword}) {
+function Result({keyword, isPending}) {
 
   const bigWork = new Array(10000).fill(0);
 
   return (
     <div>
       {
-        bigWork.map(()=> {
-          return <div>{keyword} {keyword} {keyword}</div>
-        })
+        isPending ? (
+          <div>Loading...</div>
+        ) : (
+          bigWork.map(() => {
+            return <div>{keyword} {keyword} {keyword}</div>
+          })
+        )
       }
     </div>
   )
