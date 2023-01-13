@@ -1,7 +1,7 @@
 import React from 'react'
 import Result from '../components/Result'
 
-function SearchPage({keyword, setKeyword, isPending, startTransition}) {
+function Page({keyword, setKeyword, isPending, startTransition}) {
   return (
     <div>
       <input type="text" onKeyUp={(e) => {
@@ -15,4 +15,4 @@ function SearchPage({keyword, setKeyword, isPending, startTransition}) {
   )
 }
 
-export default SearchPage
+export default Page

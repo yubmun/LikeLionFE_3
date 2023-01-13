@@ -1,6 +1,6 @@
 import { useTransition } from "react";
 import { useState } from "react";
-import SearchPage from "./pages/SearchPage";
+import SearchPage from "./pages/Page";
 
 function App() {
   const [keyword, setKeyword] = useState();
